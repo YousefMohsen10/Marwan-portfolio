@@ -188,8 +188,6 @@ export const portfolioData = {
     subtitle: "Let's collaborate to craft something memorable that achieves your business goals.",
     nameLabel: "Your Name",
     namePlaceholder: "e.g. John Doe",
-    emailLabel: "Email Address",
-    emailPlaceholder: "example@mail.com",
     serviceLabel: "Requested Service",
     serviceOptions: [
       "Commercial Key Visual & Manipulation",

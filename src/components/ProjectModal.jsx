@@ -142,7 +142,7 @@ export default function ProjectModal({ project, onClose }) {
           </span>
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/201000000000"
+              href="https://wa.me/201143279639"
               target="_blank"
               rel="noreferrer"
               className="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-zinc-900 hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 transition-colors shadow-sm"

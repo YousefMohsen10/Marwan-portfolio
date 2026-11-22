@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Send, MessageCircle, Copy, Check } from 'lucide-react';
+import { MapPin, Send, MessageCircle } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Contact() {
@@ -7,26 +7,17 @@ export default function Contact() {
 
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     service: t.serviceOptions[0],
     budget: t.budgetOptions[1],
     message: ''
   });
-
-  const [copiedEmail, setCopiedEmail] = useState(false);
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText('marwan.designer@example.com');
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
-  };
 
   const handleSendWhatsApp = (e) => {
     e.preventDefault();
     const text = `Hi Marwan,\nMy name is ${formData.name || 'Client'}.\nService requested: ${formData.service}\nEstimated Budget: ${formData.budget}\nDetails: ${formData.message || 'Looking forward to collaborating with you.'}`;
 
     const encoded = encodeURIComponent(text);
-    window.open(`https://wa.me/201000000000?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/201143279639?text=${encoded}`, '_blank');
   };
 
   return (
@@ -60,7 +51,7 @@ export default function Contact() {
 
               <div className="space-y-4 text-sm">
                 <a
-                  href="https://wa.me/+20 1143279639"
+                  href="https://wa.me/201143279639"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-4 p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/80 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 hover:scale-[1.01] hover:border-zinc-400 dark:hover:border-zinc-500 transition-all"
@@ -73,23 +64,6 @@ export default function Contact() {
                     <div className="font-bold text-sm">+20 1143279639</div>
                   </div>
                 </a>
-
-                <div className="flex items-center justify-between p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/60 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300">
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-zinc-500 dark:text-zinc-400" />
-                    <div>
-                      <div className="text-xs text-zinc-400">{t.emailLabel}</div>
-                      <div className="font-semibold text-xs sm:text-sm">{t.directEmail}</div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={handleCopyEmail}
-                    className="p-2 rounded-lg text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
-                    title="Copy email"
-                  >
-                    {copiedEmail ? <Check className="w-4 h-4 text-zinc-900 dark:text-white" /> : <Copy className="w-4 h-4" />}
-                  </button>
-                </div>
 
                 <div className="flex items-center gap-3 p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/60 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300">
                   <MapPin className="w-5 h-5 text-zinc-500 dark:text-zinc-400 shrink-0" />
@@ -133,34 +107,18 @@ export default function Contact() {
               onSubmit={handleSendWhatsApp}
               className="p-8 rounded-3xl bg-white dark:bg-[#121214] border border-zinc-200/80 dark:border-zinc-800 shadow-sm space-y-5"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-zinc-700 dark:text-zinc-300">
-                    {t.nameLabel}
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder={t.namePlaceholder}
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-500 text-sm"
-                  />
-                </div>
-
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-zinc-700 dark:text-zinc-300">
-                    {t.emailLabel}
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    placeholder={t.emailPlaceholder}
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-500 text-sm"
-                  />
-                </div>
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold text-zinc-700 dark:text-zinc-300">
+                  {t.nameLabel}
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder={t.namePlaceholder}
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-500 text-sm"
+                />
               </div>
 
               <div className="space-y-1.5">

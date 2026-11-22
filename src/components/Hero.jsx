@@ -57,7 +57,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://wa.me/201000000000"
+                href="https://wa.me/201143279639"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl font-semibold text-zinc-800 dark:text-zinc-200 bg-white dark:bg-zinc-900/90 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 transition-all text-sm sm:text-base shadow-sm"

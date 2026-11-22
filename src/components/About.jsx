@@ -10,37 +10,52 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column: Visual Bio Box */}
+          {/* Left Column: Visual Bio Box with Marwan's Photo */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-3xl overflow-hidden bg-white dark:bg-[#121214] border border-zinc-200 dark:border-zinc-800 p-8 shadow-xl space-y-6">
+            <div className="relative rounded-3xl overflow-hidden bg-white dark:bg-[#121214] border border-zinc-200 dark:border-zinc-800 p-4 sm:p-5 shadow-2xl space-y-5">
               
-              <div>
-                <h3 className="text-2xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-                  Marwan Hassan
-                </h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 font-semibold mt-0.5">
-                  Lead Commercial Visual Artist
-                </p>
+              {/* Photo Frame */}
+              <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-zinc-900 shadow-inner group">
+                <img
+                  src="/marwan.jpg"
+                  alt="Marwan Hassan - Lead Commercial Visual Artist"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                
+                {/* Floating badge inside photo */}
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-white/20 backdrop-blur-md mb-1.5 border border-white/20">
+                    Lead Visual Artist
+                  </span>
+                  <h3 className="text-xl font-extrabold tracking-tight">
+                    Marwan Hassan
+                  </h3>
+                  <p className="text-xs text-zinc-300 font-medium">
+                    Commercial Visual Artist & Graphic Designer
+                  </p>
+                </div>
               </div>
 
-              <div className="space-y-3 pt-2 border-t border-zinc-100 dark:border-zinc-800">
-                <div className="flex items-center justify-between text-sm">
+              {/* Bio Details */}
+              <div className="space-y-2.5 px-2 pt-1 border-t border-zinc-100 dark:border-zinc-800/80">
+                <div className="flex items-center justify-between text-xs sm:text-sm">
                   <span className="text-zinc-500 dark:text-zinc-400">Location</span>
                   <span className="font-semibold text-zinc-800 dark:text-zinc-200">Egypt (Available Globally)</span>
                 </div>
-                <div className="flex items-center justify-between text-sm">
+                <div className="flex items-center justify-between text-xs sm:text-sm">
                   <span className="text-zinc-500 dark:text-zinc-400">Experience</span>
-                  <span className="font-semibold text-zinc-800 dark:text-zinc-200">5+ Professional Years</span>
+                  <span className="font-semibold text-zinc-800 dark:text-zinc-200">2+ Commercial Years</span>
                 </div>
-                <div className="flex items-center justify-between text-sm">
+                <div className="flex items-center justify-between text-xs sm:text-sm">
                   <span className="text-zinc-500 dark:text-zinc-400">Specialization</span>
                   <span className="font-semibold text-zinc-800 dark:text-zinc-200">Key Visuals & Manipulation</span>
                 </div>
               </div>
 
               {/* Highlight Quote */}
-              <div className="p-4 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800">
-                <p className="text-xs sm:text-sm text-zinc-800 dark:text-zinc-200 italic leading-relaxed">
+              <div className="p-3.5 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800">
+                <p className="text-xs text-zinc-800 dark:text-zinc-200 italic leading-relaxed">
                   "Digital compositing is not just piecing layers together; it is an understanding of optical physics, realistic light falloff, and narrative tension."
                 </p>
               </div>

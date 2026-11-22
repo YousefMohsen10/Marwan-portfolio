@@ -35,13 +35,20 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Brand Name Logo */}
-          <a href="#" className="flex flex-col group">
-            <span className="font-extrabold text-lg sm:text-xl tracking-tight text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
-              Marwan Hassan
-            </span>
-            <span className="text-xs text-zinc-500 dark:text-zinc-400 font-medium tracking-wide">
-              Visual Artist & Graphic Designer
-            </span>
+          <a href="#" className="flex items-center gap-3 group">
+            <img
+              src="/marwan.jpg"
+              alt="Marwan Hassan"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover object-top border border-zinc-200 dark:border-zinc-700 shadow-sm group-hover:scale-105 transition-transform"
+            />
+            <div className="flex flex-col">
+              <span className="font-extrabold text-base sm:text-lg tracking-tight text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                Marwan Hassan
+              </span>
+              <span className="text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 font-medium tracking-wide">
+                Visual Artist & Graphic Designer
+              </span>
+            </div>
           </a>
 
           {/* Desktop Navigation */}
