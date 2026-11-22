@@ -34,9 +34,9 @@ export default function Testimonials() {
             >
               <div className="space-y-4">
                 {/* 5 Stars */}
-                <div className="flex items-center gap-1 text-zinc-400 dark:text-zinc-400">
+                <div className="flex items-center gap-1 text-amber-400">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-zinc-400 dark:fill-zinc-400 text-zinc-400 dark:text-zinc-400" />
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
 
