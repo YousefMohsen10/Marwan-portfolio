@@ -204,8 +204,7 @@ export const portfolioData = {
     messagePlaceholder: "Tell me briefly about your project scope, timeline, and requirements...",
     sendBtn: "Send via WhatsApp",
     directChat: "Instant Direct Chat",
-    directPhone: "+20 100 000 0000",
-    directEmail: "marwan.designer@example.com",
+    directPhone: "+20 1143279639",
     location: "Cairo, Egypt (Available Globally for Remote Work)",
     socials: {
       behance: "Behance",
