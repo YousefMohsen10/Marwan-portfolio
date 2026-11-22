@@ -24,7 +24,7 @@ export default function Contact() {
   const handleSendWhatsApp = (e) => {
     e.preventDefault();
     const text = `Hi Marwan,\nMy name is ${formData.name || 'Client'}.\nService requested: ${formData.service}\nEstimated Budget: ${formData.budget}\nDetails: ${formData.message || 'Looking forward to collaborating with you.'}`;
-    
+
     const encoded = encodeURIComponent(text);
     window.open(`https://wa.me/201000000000?text=${encoded}`, '_blank');
   };
@@ -32,7 +32,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 md:py-28 relative bg-zinc-100/60 dark:bg-[#0c0c0e] border-t border-zinc-200/80 dark:border-zinc-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-zinc-100 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700">
@@ -50,17 +50,17 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
+
           {/* Direct Info Card */}
           <div className="lg:col-span-5 space-y-6">
             <div className="p-8 rounded-3xl bg-white dark:bg-[#121214] border border-zinc-200/80 dark:border-zinc-800 shadow-sm space-y-6">
               <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
                 {t.directChat}
               </h3>
-              
+
               <div className="space-y-4 text-sm">
                 <a
-                  href="https://wa.me/201000000000"
+                  href="https://wa.me/+20 1143279639"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-4 p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/80 dark:border-zinc-700/80 text-zinc-800 dark:text-zinc-200 hover:scale-[1.01] hover:border-zinc-400 dark:hover:border-zinc-500 transition-all"
@@ -70,7 +70,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs text-zinc-500 dark:text-zinc-400 font-semibold">{t.socials.whatsapp}</div>
-                    <div className="font-bold text-sm">+20 100 000 0000</div>
+                    <div className="font-bold text-sm">+20 1143279639</div>
                   </div>
                 </a>
 
@@ -188,11 +188,10 @@ export default function Contact() {
                       type="button"
                       key={i}
                       onClick={() => setFormData({ ...formData, budget })}
-                      className={`py-2 px-3 rounded-xl text-xs font-semibold border transition-all ${
-                        formData.budget === budget
+                      className={`py-2 px-3 rounded-xl text-xs font-semibold border transition-all ${formData.budget === budget
                           ? 'bg-zinc-900 text-white border-zinc-900 dark:bg-white dark:text-zinc-950 dark:border-white shadow-sm'
                           : 'bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border-zinc-200 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-700'
-                      }`}
+                        }`}
                     >
                       {budget}
                     </button>
